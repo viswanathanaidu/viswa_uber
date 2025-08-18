@@ -1,0 +1,9 @@
+requests==2.32.4
+fastapi
+uvicorn
+python-dotenv
+pyodbc
+pydantic
+python-jose[cryptography]
+passlib[bcrypt]
+python-jose[cryptography]
