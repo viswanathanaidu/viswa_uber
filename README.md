@@ -32,12 +32,6 @@ It demonstrates **scalable API design, clean database integration, and productio
   - SQL Server with **Stored Procedures** for core business logic
   - Uses `pyodbc` with `.env` for secure DB connection
 
-## 🔐 Authentication
-- This API uses **JWT (JSON Web Tokens)** for secure authentication.
-- Login via `/users/login` to get a `Bearer <token>`.
-- Include this token in the `Authorization` header for protected endpoints.
----
-
 ## 🔐 Authentication & Authorization
 - This project uses **JWT (JSON Web Tokens)** for secure authentication.
 - **Login** → `/users/login` returns a JWT with role (`rider` or `driver`).
@@ -58,8 +52,7 @@ It demonstrates **scalable API design, clean database integration, and productio
 - **Env Management**: `python-dotenv`
 - **Data Models**: Pydantic for request/response validation
 
----
 
-## 📂 Project Structure
+
 
 
