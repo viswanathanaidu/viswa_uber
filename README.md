@@ -1,7 +1,7 @@
 # 🚖 Uber-like Ride Hailing API (FastAPI + SQL Server)
 
 This project is a **backend API for an Uber-like ride-hailing service**, built with **FastAPI** and **SQL Server (Stored Procedures)**.  
-It demonstrates **scalable API design, clean database integration, and production-ready structure** for interview portfolios.
+It demonstrates **scalable API design, clean database integration, and production-ready structure**.
 
 ---
 
@@ -61,4 +61,5 @@ It demonstrates **scalable API design, clean database integration, and productio
 ---
 
 ## 📂 Project Structure
+
 
