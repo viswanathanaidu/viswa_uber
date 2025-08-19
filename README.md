@@ -50,7 +50,5 @@ It provides endpoints for **user management, authentication, ride requests, driv
 - [python-jose](https://github.com/mpdavis/python-jose) – JWT handling
 - [dotenv](https://github.com/theskumar/python-dotenv) – Environment variables
 
----
 
-## 📂 Project Structure
 
