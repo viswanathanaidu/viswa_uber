@@ -1,58 +1,56 @@
-# 🚖 Uber-like Ride Hailing API (FastAPI + SQL Server)
+# 🚖 Uber-like API with FastAPI & SQL Server
 
-This project is a **backend API for an Uber-like ride-hailing service**, built with **FastAPI** and **SQL Server (Stored Procedures)**.  
-It demonstrates **scalable API design, clean database integration, and production-ready structure**.
+This project is a **backend API** for an Uber-like ride-hailing service built using **FastAPI**, **SQL Server (Stored Procedures)**, and **JWT authentication**.  
+
+It provides endpoints for **user management, authentication, ride requests, driver management, payments, and role-based access control**.
 
 ---
 
-## ✨ Features
-- 👤 **User Management**
+## 📌 Features
+
+- 🔐 **Authentication & Authorization**
+  - JWT-based login
+  - Role-based access control (`rider`, `driver`, `admin`)
+  - OAuth2 scopes for fine-grained permissions
+
+- 👥 **User Management**
   - Register new users
-  - Login authentication
-  - Update profile
+  - Update user profiles
   - Fetch user details
+  - Admin-only user listing
 
 - 🚗 **Driver Management**
   - Upload driver documents
-  - Update driver status/location
-  - Verify driver with vehicle
-  - Fetch driver details and ride history
+  - Update driver location & status
+  - Admin verification for drivers
+  - Fetch driver details
 
 - 🛺 **Ride Management**
-  - Request rides (with pickup/dropoff details)
-  - Accept rides (drivers)
-  - Complete or cancel rides
-  - Fetch active and completed rides
+  - Request ride (rider)
+  - Accept ride (driver)
+  - Complete ride
+  - Cancel ride
+  - Fetch rides (active, completed, driver-specific)
 
 - 💳 **Payments**
-  - Track and update ride payments
-  - Get payment status for a ride
+  - Update payment status
+  - Fetch payment details
 
-- 🛢 **Database**
-  - SQL Server with **Stored Procedures** for core business logic
-  - Uses `pyodbc` with `.env` for secure DB connection
+- 🗄 **Database Integration**
+  - Uses **SQL Server stored procedures**
+  - Database connection managed via `pyodbc`
 
-## 🔐 Authentication & Authorization
-- This project uses **JWT (JSON Web Tokens)** for secure authentication.
-- **Login** → `/users/login` returns a JWT with role (`rider` or `driver`).
-- Include the token in requests:
+---
 
-- **Role-based access control (RBAC):**
-- Riders can only:
-  - Request rides (`/rides/`)
-  - View their active/completed rides
-- Drivers can only:
-  - Accept rides (`/rides/{ride_id}/accept`)
-  - Update their status & location
+## ⚙️ Tech Stack
 
-## 🛠 Tech Stack
-- **Backend Framework**: [FastAPI](https://fastapi.tiangolo.com/)
-- **Database**: SQL Server (`pyodbc` driver)
-- **Auth**: Stored procedure-based user authentication
-- **Env Management**: `python-dotenv`
-- **Data Models**: Pydantic for request/response validation
+- [FastAPI](https://fastapi.tiangolo.com/) – Web framework
+- [SQL Server](https://www.microsoft.com/en-us/sql-server) – Database with stored procedures
+- [pyodbc](https://github.com/mkleehammer/pyodbc) – SQL Server driver
+- [python-jose](https://github.com/mpdavis/python-jose) – JWT handling
+- [dotenv](https://github.com/theskumar/python-dotenv) – Environment variables
 
+---
 
-
-
+## 📂 Project Structure
 
